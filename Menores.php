@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Ejemplo de PHP</title>
+<title>Ejemplo de PHP</title> //Este es un comentario
 </head>
 
 <body>
