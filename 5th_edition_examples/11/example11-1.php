@@ -6,7 +6,7 @@ echo <<<_END
     </head>
     <body>
     <form method="post" action="formtest.php">
-      What is your name?
+      Cual es tu Nombre?
       <input type="text" name="name">
       <input type="submit">
     </form>

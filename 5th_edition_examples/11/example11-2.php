@@ -9,7 +9,7 @@
     </head>
     <body>
     Your name is: $name<br>
-    <form method="post" action="formtest.php">
+    <form method="post" action="example11-1.php">
       What is your name?
       <input type="text" name="name">
       <input type="submit">

@@ -3,5 +3,5 @@
   $hn = 'localhost';
   $db = 'publications';
   $un = 'root';
-  $pw = 'mysql';
+  $pw = '';  // 'mysql';
 ?>
