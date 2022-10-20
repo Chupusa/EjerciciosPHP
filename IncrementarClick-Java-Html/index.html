@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Mi primera web con JavaScript</title>
+        <script>
+            var clicks=0;
+            function incrementar(){
+            clicks = clicks+1;
+            document.getElementById('contador').innerHTML= clicks;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Ejecución de código JavaScript en el navegador</h1> 
+        <button type='button' onclick='incrementar()' Incrementar>Incrementar</button>
+        <p id='contador'>0</p>
+    </body>
+</html>

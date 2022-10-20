@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi primera web con JQuery</title>
+        <script src='jquery.js'></script>
+        <script>
+            var clicks=0; 
+            $(function(){
+                $('button').click(function(){
+                clicks = clicks+1;
+                $('#contador').html(clicks);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Ejecución de código JavaScript en el navegador</h1> 
+        <button  type='button'>Incrementar</button>
+        <p id='contador'></p>
+    </body>
+</html>
