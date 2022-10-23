@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>Consulta Registro con AJAX</title>
+        <script language="JavaScript" type="text/javascript" src="ajax.js"></script> <!-- referenciamos al archivo ajax.js donde se encuentra nuestra funcion objetoAjax-->
+        <script language="JavaScript" type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    </head>
+    <body>
+        
+        <script>
+            $(document).ready(function (){
+                var ajax = new XMLHttpRequest();
+                $("#btnMostrar").click(function () {
+                    ajax.open("POST", "consulta.php", true);
+                    ajax.onreadystatechange=function() {
+                        if(ajax.readyState==4){
+                            var array = JSON.parse(ajax.responseText);
+                            $("#txtNombre").val(array[0].nombres);
+                            $("#txtApellodos").val(array[0].apellidos);
+                            $("#txtTelefono").val(array[0].telefono);
+                        }
+                    }
+                    ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+                    ajax.send();
+                });
+            });
+        </script>
+
+        <p>Nombres:
+            <input type="text" id="txtNombre"></p>
+        <p>Apellidos:
+            <input type="text" id="txtApellodos"></p>
+        <p>Telefono:
+            <input type="text" id="txtTelefono"></p>
+            <button id="btnMostrar">Mostrar</button>
+        
+        <!-- <p>Consultar registros con ajax</p>"</p>"<p> En "onsubmit" escribimos la función 'MostrarConsulta' que creamos en javascript,
+                                                        con su parametro que es el archivo que vamos a mostrar, en este caso 'consulta.php'
+        <form name="consulta" action="" onsubmit="MostrarConsulta('consulta.php'); return false">
+            <label>
+                <input type="submit" value="Consultar" />
+            </label>
+        </form>
+        <div id="resultado"></div> -->
+    </body>
+</html>

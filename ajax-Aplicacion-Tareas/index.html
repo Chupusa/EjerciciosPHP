@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicacion de Tareas</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">Task App</a>
+
+        <ul class="navbar-nav ml-auto">
+            <form class="form-inline my-2 my-lg-0">
+                <input type="search" id="search" class="form-control mr-sm-2" placeholder="Busca tu Tarea">
+                <button class="btn btn-success my-2 my-sm-0" type="submit">
+                    Buscar
+                </button>
+
+            </form>
+        </ul>
+    </nav>
+
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="task-form">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Task name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <textarea id="description" cols="30" rows="10" class="form-control" placeholder="Task description"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block text-align-center text-center">
+                                Guardar Tarea
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-7">
+                <table class="table table-bordered table-sm">
+                    <thead>
+                        <tr>
+                            <td>Id</td>
+                            <td>Name</td>
+                            <td>Description</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tasks"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+
+
+</body>
+</html>
