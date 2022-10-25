@@ -1,7 +1,7 @@
 <?php
 /*
 * Script: Conexión a base de datos de MySQL con PHP
-* Autor: Marco Robles
+* Autor: J Jesus Urbina Solis
 * Team: Códigos de Programación
 */
 
