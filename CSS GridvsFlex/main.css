@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* USU DE CSS GRID */
+.caja{
+    background: #fff;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0.7em auto;
+    display: grid;
+    gap: 1.6em;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.caja > .menu,
+.caja > .contenido,
+.caja > .pie,
+.caja > .div {
+    background: #fff;
+    padding: 5px;
+    border: 1px solid #000;
+}
+
+
+.caja .menu,
+.caja .pie {
+    grid-column: 1/4;
+    background:#1e27;
+    color: #000;
+    text-align: center;
+}
+
+.caja .contenido{
+    grid-column: 1/4;
+    color: blue;
+    text-align: center;
+} 
+
+/* Propiedades minimas para el Footer siempre en su Lugar */
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background: #ef0e;
+}
+
+.caja .pie{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
